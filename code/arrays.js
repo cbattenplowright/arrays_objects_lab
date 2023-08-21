@@ -57,9 +57,9 @@ console.log(stations);
  * Q6.
  * How did Leeds get on there? Better remove it.
  */
-for (let station in stations) {
-    if (stations[station] === "Leeds") {
-        stations.splice(station,1);
+for (let stationIndex in stations) {
+    if (stations[stationIndex] === "Leeds") {
+        stations.splice(stationIndex, 1);
     }
 }
 console.log(stations);
@@ -70,8 +70,13 @@ console.log(stations);
  * Q7.
  * We forgot about Darlington! Add it to the route between Newcastle and York.
  */
-
-// console.log(stations);
+for (let stationIndex in stations){
+    if (stations[stationIndex] === "York") {
+        stations.splice(stationIndex, 0, "Darlington");
+        break
+    }
+}
+console.log(stations);
 
 
 
