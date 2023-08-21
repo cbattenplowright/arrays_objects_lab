@@ -70,12 +70,15 @@ console.log(stations);
  * Q7.
  * We forgot about Darlington! Add it to the route between Newcastle and York.
  */
-for (let stationIndex in stations){
-    if (stations[stationIndex] === "York") {
-        stations.splice(stationIndex, 0, "Darlington");
-        break
-    }
-}
+
+stations.splice(stations.indexOf("York"), 0, "Darlington");
+
+// for (let stationIndex in stations){
+//     if (stations[stationIndex] === "York") {
+//         stations.splice(stationIndex, 0, "Darlington");
+//         break
+//     }
+// }
 console.log(stations);
 
 
