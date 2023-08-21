@@ -80,7 +80,6 @@ for (country of unitedKingdom) {
 
 populations.sort(function (a, b) { return a - b }); // Sorts the populations in numeric order
 
-
 if (scotlandPopulation === populations[0]) {
   console.log("The population of Scotland is the smallest in the UK");
 } else if (scotlandPopulation === populations.length) {
