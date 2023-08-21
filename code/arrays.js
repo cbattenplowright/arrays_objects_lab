@@ -72,13 +72,6 @@ console.log(stations);
  */
 
 stations.splice(stations.indexOf("York"), 0, "Darlington");
-
-// for (let stationIndex in stations){
-//     if (stations[stationIndex] === "York") {
-//         stations.splice(stationIndex, 0, "Darlington");
-//         break
-//     }
-// }
 console.log(stations);
 
 
@@ -88,9 +81,8 @@ console.log(stations);
  * Is Durham one of the stops?
  */
 
-stoppingAtDurham = null;
-
-// console.log(stoppingAtDurham);
+stoppingAtDurham = stations.includes("Durham");
+console.log(stoppingAtDurham);
 
 
 /**
