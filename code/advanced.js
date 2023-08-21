@@ -42,7 +42,7 @@ console.log(england);
 wales = null;
 
 for (country of unitedKingdom) {
-  if (country.capital === "Swansea"){
+  if (country.capital === "Swansea") {
     country.capital = "Cardiff";
     wales = country.capital;
   }
@@ -67,3 +67,24 @@ console.log(northernIrelandKeys);
 /**
  * Q4. Use an if statement to compare the population of Scotland to the other countries and print out if it is the biggest, smallest or somewhere in the middle.
  */
+
+populations = [];
+scotlandPopulation = null;
+
+for (country of unitedKingdom) {
+  populations.push(country.population);
+  if (country.name === "Scotland") {
+    scotlandPopulation = country.population;
+  }
+}
+
+populations.sort(function (a, b) { return a - b }); // Sorts the populations in numeric order
+
+
+if (scotlandPopulation === populations[0]) {
+  console.log("The population of Scotland is the smallest in the UK");
+} else if (scotlandPopulation === populations.length) {
+  console.log("The population of Scotland is the largest in the UK");
+} else {
+  console.log("The population of Scotland is somewhere in the middle");
+}
