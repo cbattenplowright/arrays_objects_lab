@@ -57,8 +57,12 @@ console.log(stations);
  * Q6.
  * How did Leeds get on there? Better remove it.
  */
-
-// console.log(stations);
+for (let station in stations) {
+    if (stations[station] === "Leeds") {
+        stations.splice(station,1);
+    }
+}
+console.log(stations);
 
 
 
