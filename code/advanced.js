@@ -41,7 +41,7 @@ console.log(england);
 
 wales = null;
 
-for (country of unitedKingdom){
+for (country of unitedKingdom) {
   if (country.capital === "Swansea"){
     country.capital = "Cardiff";
     wales = country.capital;
@@ -56,7 +56,13 @@ console.log(wales);
 
 northernIrelandKeys = null;
 
-// console.log(northernIrelandKeys);
+for (country of unitedKingdom) {
+  if (country.name === "Northern Ireland") {
+    northernIrelandKeys = Object.keys(country);
+  }
+}
+
+console.log(northernIrelandKeys);
 
 /**
  * Q4. Use an if statement to compare the population of Scotland to the other countries and print out if it is the biggest, smallest or somewhere in the middle.
